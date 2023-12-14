@@ -16,4 +16,15 @@ public:
 
   virtual void Deinitialize() override;
 
+  UPROPERTY (EditAnywhere, BlueprintReadWrite, Category = "Variables")
+  float timeRemaining;
+
+  UPROPERTY (EditAnywhere, BlueprintReadWrite, Category = "Variables")
+  bool isDelivered;
+
+  UPROPERTY (EditAnywhere, BlueprintReadWrite, Category = "Variables")
+  bool isCollected;
+
+  UFUNCTION (BlueprintCallable, Category = "Variables")
+  void SetData (float currentTimeRemaining, bool currentIsDelivered, bool currentIsCollected);
 };
